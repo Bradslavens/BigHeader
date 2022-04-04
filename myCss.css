@@ -24,21 +24,17 @@ text {
 }
 
 .sub1 {
-    height: 25vw;
-    width: 25vw;
-    transform: translate(50%, 0%);
+    height: 15vw;
+    width: 15vw;
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
-    margin: 0 auto;
+    background-size: cover;
     border-radius: 50%;
-    background-size: 25vh 25vh;
-    /* animation: slide 5s; */
-    animation-fill-mode: forwards;
 }
 
 @keyframes slide {
     100% {
-        transform: translate(-150%, 0%);
+        transform: translate(-33.33vw, 0%);
     }
 }
 
@@ -46,32 +42,22 @@ li {
     border: solid 3px black;
 }
 
-#a {
-    background-image: url("https://assets.codepen.io/t-1/claudel-rheault-ZVbv1akA-l4-unsplash.jpg");
-    position: absolute;
-    top: 0%;
-}
-
-#b {
-    background-image: url("https://assets.codepen.io/t-1/simon-berger-9Ct73yKbpEo-unsplash.jpg");
-    position: absolute;
-    top: 0%;
-}
-
-#c {
-    background-image: url("https://assets.codepen.io/t-1/robert-bye-OlZ1nWLEEgM-unsplash.jpg" );
-    position: absolute;
-    top: 0%;
-}
-
-#d {
-    background-image: url("https://assets.codepen.io/t-1/saad-chaudhry-WdBu6PJ83uY-unsplash.jpg");
-    position: absolute;
-    top: 0%;
-}
+[data-item = "1"] { background-image: url("https://assets.codepen.io/t-1/claudel-rheault-ZVbv1akA-l4-unsplash.jpg");}
+[data-item = "2"] { background-image: url("https://assets.codepen.io/t-1/simon-berger-9Ct73yKbpEo-unsplash.jpg");}
+[data-item = "3"] { background-image: url("https://assets.codepen.io/t-1/robert-bye-OlZ1nWLEEgM-unsplash.jpg" );}
+[data-item = "4"] { background-image: url("https://assets.codepen.io/t-1/claudel-rheault-ZVbv1akA-l4-unsplash.jpg");}
+[data-item = "5"] { background-image: url("https://assets.codepen.io/t-1/simon-berger-9Ct73yKbpEo-unsplash.jpg");}
+[data-item = "6"] { background-image: url("https://assets.codepen.io/t-1/robert-bye-OlZ1nWLEEgM-unsplash.jpg" );}
 
 ul {
-    border: solid 3px red;
-    position: relative;
-    list-style-type: none;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    width: 200vw;
 }
+
+.move {
+    animation: slide 2s;
+    animation-fill-mode: forwards;
+}
+
