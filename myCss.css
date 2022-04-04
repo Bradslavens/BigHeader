@@ -3,6 +3,8 @@
     margin: 0px;
     padding: 0px;
 }
+
+/* header */
 svg {
     width: 100%;
     height: 100%;
@@ -23,13 +25,24 @@ text {
     font-size: 50%;
 }
 
-.sub1 {
+/* carousel */
+
+#carousel {
+    display: block;
+    list-style: none;
+    width: 100vw;
+    position: relative;
+
+}
+
+.pic {
     height: 15vw;
     width: 15vw;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 50%;
+    position: absolute;
 }
 
 @keyframes slide {
@@ -38,26 +51,13 @@ text {
     }
 }
 
-li {
-    border: solid 3px black;
-}
-
 [data-item = "1"] { background-image: url("https://assets.codepen.io/t-1/claudel-rheault-ZVbv1akA-l4-unsplash.jpg");}
 [data-item = "2"] { background-image: url("https://assets.codepen.io/t-1/simon-berger-9Ct73yKbpEo-unsplash.jpg");}
 [data-item = "3"] { background-image: url("https://assets.codepen.io/t-1/robert-bye-OlZ1nWLEEgM-unsplash.jpg" );}
-[data-item = "4"] { background-image: url("https://assets.codepen.io/t-1/claudel-rheault-ZVbv1akA-l4-unsplash.jpg");}
+/* [data-item = "4"] { background-image: url("https://assets.codepen.io/t-1/claudel-rheault-ZVbv1akA-l4-unsplash.jpg");}
 [data-item = "5"] { background-image: url("https://assets.codepen.io/t-1/simon-berger-9Ct73yKbpEo-unsplash.jpg");}
-[data-item = "6"] { background-image: url("https://assets.codepen.io/t-1/robert-bye-OlZ1nWLEEgM-unsplash.jpg" );}
+[data-item = "6"] { background-image: url("https://assets.codepen.io/t-1/robert-bye-OlZ1nWLEEgM-unsplash.jpg" );} */
 
-ul {
-    display: flex;
-    list-style: none;
-    justify-content: space-around;
-    width: 200vw;
-}
-
-.move {
-    animation: slide 2s;
-    animation-fill-mode: forwards;
-}
-
+[data-item = "1"] { left: 10vw; }
+[data-item = "2"] { left: 50vw; transform: translate(-50%); }
+[data-item = "3"] { left: 90vw; transform: translate(-100%); }
