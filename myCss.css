@@ -2,6 +2,9 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+    /* --vw1: 10vw;
+    --vw2: 50vw;
+    --vw3: 90vw; */
 }
 
 /* header */
@@ -45,19 +48,23 @@ text {
     position: absolute;
 }
 
-@keyframes slide {
-    100% {
-        transform: translate(-33.33vw, 0%);
-    }
+@keyframes slide1 { 
+    0%,100% { left: 10vw; }
+    33.33% { left: 90vw; transform: translate(-100%);}
+    66.66%  { left: 50vw; transform: translate(-50%);} 
 }
 
+/* item photos */
 [data-item = "1"] { background-image: url("https://assets.codepen.io/t-1/claudel-rheault-ZVbv1akA-l4-unsplash.jpg");}
 [data-item = "2"] { background-image: url("https://assets.codepen.io/t-1/simon-berger-9Ct73yKbpEo-unsplash.jpg");}
 [data-item = "3"] { background-image: url("https://assets.codepen.io/t-1/robert-bye-OlZ1nWLEEgM-unsplash.jpg" );}
-/* [data-item = "4"] { background-image: url("https://assets.codepen.io/t-1/claudel-rheault-ZVbv1akA-l4-unsplash.jpg");}
-[data-item = "5"] { background-image: url("https://assets.codepen.io/t-1/simon-berger-9Ct73yKbpEo-unsplash.jpg");}
-[data-item = "6"] { background-image: url("https://assets.codepen.io/t-1/robert-bye-OlZ1nWLEEgM-unsplash.jpg" );} */
 
+/* initial position of divs */
 [data-item = "1"] { left: 10vw; }
 [data-item = "2"] { left: 50vw; transform: translate(-50%); }
 [data-item = "3"] { left: 90vw; transform: translate(-100%); }
+
+/* animate itmes */
+[data-item = "1"]{ animation: slide1 3s;}
+[data-item = "2"]{ animation: slide2 3s;}
+[data-item = "3"]{ animation: slide3 3s;}
