@@ -68,7 +68,16 @@ text { font-family: 'Archivo Black', sans-serif; fill: rgb(19, 4, 163); }
 [data-item = "2"] { left: 50vw; transform: translate(-50%); }
 [data-item = "3"] { left: 90vw; transform: translate(-100%); height: 10vw; width: 10vw;}
 
-/* animate itmes */
+/* animate items */
 [data-item = "1"]{ animation: slide1 12s; animation-iteration-count: infinite;}
 [data-item = "2"]{ animation: slide2 12s; animation-iteration-count: infinite;}
 [data-item = "3"]{ animation: slide3 12s; animation-iteration-count: infinite;}
+
+ul li h2 {
+    font-size: 2em;
+    text-align: center;
+    background-color: white;
+    box-shadow: 10px 5px 5px rgb(121, 117, 117);
+}
+
+ul li h2, ul li p {     font-family: 'Roboto', sans-serif; }
